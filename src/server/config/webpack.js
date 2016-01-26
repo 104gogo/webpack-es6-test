@@ -8,7 +8,7 @@ export function run(app) {
 
     const compiler = webpack(webpackConfig);
     const devMiddleware = webpackDevMiddleware(compiler, {
-        publicPath: '',
+        publicPath: webpackConfig.output.publicPath,
         noInfo: false,
         stats: {
             colors: true

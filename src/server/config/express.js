@@ -23,6 +23,6 @@ export function run(app) {
     }));
     app.use(cookieParser());
     app.use(compress());
-    //app.use(express.static('./../../../public'));
+    app.use(express.static('./../../../public'));
     app.use(methodOverride());
 };
