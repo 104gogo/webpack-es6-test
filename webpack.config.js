@@ -1,31 +1,4 @@
-var webpack = require('webpack');
+var NODE_ENV = process.env.NODE_ENV;
+var webpackConfig = require(`./webpack/webpack.config.${ NODE_ENV }`).default;
 
-module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './src/server.js'
-  ],
-  module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'react-hot!babel'
-    }]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: './dist',
-    hot: true
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
-};
+export default webpackConfig;

@@ -10,7 +10,7 @@ export default function() {
     require('./config/express').run(app);
 
     //集成webpack运行环境
-    //require('./config/webpack').run(app);
+    require('./config/webpack').run(app);
 
     return app;
 };
