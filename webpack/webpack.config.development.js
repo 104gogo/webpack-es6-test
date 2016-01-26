@@ -6,7 +6,7 @@ import baseConfig from './webpack.config.base';
 
 export default assign({}, baseConfig, {
 	entry: [
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?reload=true',
     	path.join(__dirname, '..', 'src', 'client/index')
     ],
     output: {
