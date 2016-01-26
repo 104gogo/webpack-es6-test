@@ -5,7 +5,7 @@ import assign from 'object-assign';
 import baseConfig from './webpack.config.base';
 
 export default assign({}, baseConfig, {
-	entry:[
+	entry: [
         'webpack-hot-middleware/client',
     	path.join(__dirname, '..', 'src', 'client/index')
     ],
@@ -14,7 +14,7 @@ export default assign({}, baseConfig, {
 	    filename: 'bundle.js',
 	    publicPath: '/assets/'
     },
-    plugins:[
+    plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()

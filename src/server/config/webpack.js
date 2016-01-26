@@ -5,7 +5,6 @@ import path from 'path';
 import webpackConfig from '../../../webpack.config';
 
 export function run(app) {
-
     const compiler = webpack(webpackConfig);
     const devMiddleware = webpackDevMiddleware(compiler, {
         publicPath: webpackConfig.output.publicPath,
