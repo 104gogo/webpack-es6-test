@@ -1,5 +1,5 @@
 # webpack-es6-test
-win7 + node v0.12.7
+    win7 + node v0.12.7
     1.完成es6编译
     2.启动express服务
     3.集成webpack 开发环境（使用webpack-dev-middleware，webpack-hot-middleware）
